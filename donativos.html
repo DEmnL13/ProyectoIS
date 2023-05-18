@@ -1,0 +1,171 @@
+<!--<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{GP} Formulario de donativos</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
+</head>
+<body>
+    <section class="d-flex justify-content-center align-items-center">
+        <div class="card shadow col-xs-12 col-sm-6 col-md-6 col-lg-4   p-4"> 
+            <div class="mb-4 d-flex justify-content-start align-items-center">
+              
+                <h4>  <i class="bi bi-chat-left-quote"></i> &nbsp; Ayudanos a generar sonrisas!</h4>
+            </div>
+            <div class="mb-1">
+                <form id = "contacto" method="post" action="donativos.php">
+                    <div class="mb-4 d-flex justify-content-between"> 
+                        <div>
+                            <label for="Empresa"> <i class="bi bi-person-fill"></i> Empresa</label>
+                            <input type="text" class="form-control" name="empresa" id="Empresa" placeholder= "Opcional">
+                            <div class="nombre text-danger "></div>
+                        </div>
+                        <div >
+                            <label for="Nombre"> <i class="bi bi-person-bounding-box"></i> Nombre del colaborador</label>
+                            <input type="text" class="form-control" name="nombre" id="Nombre" required>
+                            <div class="apellido text-danger"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="correo"><i class="bi bi-envelope-fill"></i> Correo</label>
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder= "ej: 3.3.0@mail.com" required>
+                        <div class="correo text-danger"></div>
+                        
+                    </div> 
+                    <div class="mb-4">
+                        <label>Cantidad a Donar</label>
+                        <input name="cantidad" id="cantidad" placeholder="$XXXX">
+                        <div class="cantidad text-danger"></div>
+                    </div>  
+                    <div class="mb-4">
+                        <label for="tarjeta"> <i class="bi bi-chat-right-dots-fill" required></i>Información de Tarjeta:</label>
+                        <textarea name="infotarjeta" id="tarjeta" class="form-control" placeholder="Inserte su número de tarjeta aquí."></textarea>
+                        <div class="tarjeta text-danger"></div>
+                    </div> 
+                    
+                    <div class="mb-2">
+                        <button id ="botton" class="col-12 btn btn-primary d-flex justify-content-between" type="submit">
+                            <spanp>Donar </span><i id="icono" class="bi bi-cursor-fill "></i>
+                        </button>
+                    </div> 
+                              
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/assets/logo-vt.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Registro </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+  </head>
+  <body class=" d-flex justify-content-center align-items-center vh-100">
+    <div
+      class="bg-white p-5 rounded-5 text-secondary shadow"
+      style="width:25rem"
+    >
+      <div class="d-flex justify-content-center">
+        <img
+          src="imagene/log1.png"
+          alt="login-icon"
+          style="height: 7rem"
+        />
+
+      </div>
+      <div class="text-center fs-2 fw-bold">Ayúdanos a generar más sonrisas!</div>
+      <form method="post" action="donativos.php">
+
+      <div class=" input-group mt-7">
+        <input
+          class="form-control bg-light"
+          type="text"
+          placeholder="Empresa (Opcional)" 
+          name="empresa"
+        />
+      </div>
+      <div class="input-group mt-3">
+
+        <input
+          class="form-control bg-light"
+          type="text"
+          placeholder="Colaborador"
+          name="colaborador"
+        />
+      </div>
+      <div class="input-group mt-3">
+
+        <input
+          class="form-control bg-light"
+          type="text"
+          placeholder="Correo"
+          name="correo"
+        />
+      </div>
+      <div class="input-group mt-4">
+
+        <input
+          class="form-control bg-light"
+          type="number"
+          placeholder="Cantidad"
+          name="cantidad"
+        />
+      </div>
+      <div class="input-group mt-3">
+
+        <input
+          class="form-control bg-light"
+          type="text"
+          placeholder="Información de Tarjeta"
+          name="infotarjeta"
+        />
+      </div>
+
+      <div class="d-flex justify-content-around mt-1">
+        <div class="d-flex align-items-center gap-1">
+          
+        <div class="pt-1" style="font-size: 0.9rem"></div>
+        </div>
+
+      </div>
+      <button class="btn  text-black w-100 mt-4 fw-semibold shadow-sm" type="submit">
+        Donar!
+      </button>
+    </form>
+
+      <div class="d-flex gap-1 justify-content-center mt-4">
+        
+      </div>
+      <div class="p-3">
+      <div class="d-flex gap-1 justify-content-center mt-1">
+
+
+        <a class="link" href="index.html" href="#" class="text-decoration-none  fw-semibold"
+          >Cancelar Operación</a>
+      </div>
+      <div class="p-3">
+          
+        </div>
+      </div>
+      
+  </body>
+</html>

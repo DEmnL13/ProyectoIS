@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<!--META-->
+		<title>IS</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Esperanzas_Sueños_Sonrisas">
+		<meta name="author" content="DEmnL13">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--LINKS-->
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<header>
+			<div id="logo" class="contain">
+				<a href="index.html"> <img src="log.png" alt="Logo" width="220px" height="220px" ></a>
+			</div>
+			<div>
+				<nav> 
+					<a id="myBtn"><button class="boton3">Contactos</button></a>
+					<a href="index.html"><button class="boton3" href="#n2">Inicio</button></a>
+					<a href="login.html"><button class="boton3">Log-in</button></a>
+				</nav>
+			</div>
+		</header>
+
+		<!--4Ventanas-->
+		<main class="home">
+			<hgroup>
+			</hgroup>
+			<div class="noticias">
+			<article id="Unete">
+					
+				<a href="noticia1.html"><img src="n1.jpg" alt="Portada" title="Noticias" width="auto" height="auto" ></a>
+			</article>
+				
+			<article id="n1">
+					
+					<a href="donativos.html"><img src="n2.jpg" alt="Portada" title="Donaciones" width="auto" height="auto"></a>
+				</article>
+
+			<article id="n4">
+					<a href="contacto.html"><img src="n5.jpg" alt="Portada" title="Actividades" width="auto" height="auto"></a>
+				</article>
+			<article id="unete">
+				<!--Falta el href para la pagina o ventana de "sobre nosotros"-->
+					<a href="nosotros.html"><img src="n6.jpg" alt="Portada" title="Sobre nosotros" width="auto" height="auto"></a>
+				</article>
+		</main>
+
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+			<span class="close">&times;</span>
+			<p><strong>Correo:</strong> direccion_correo@hotmail.com</p>
+			<br>
+			<a href="https://www.facebook.com/profile.php?id=100070818625819"  target="_blank"><p><strong>Visitanos en Facebook! </strong></p></a>
+			</div>
+		</div>
+
+		<script>
+			// Get the modal
+			const modal = document.getElementById("myModal");
+			// Get the button that opens the modal
+			const btn = document.getElementById("myBtn");
+			// Get the <span> element that closes the modal
+			const span = document.getElementsByClassName("close")[0];
+			// When the user clicks on the button, open the modal
+			btn.onclick = function() {
+				modal.style.display = "block";
+			}
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
+	</body>
+
+		<!--FOOTER-->
+	<footer>
+		<a>Aqui se pondra imformacion legal y esas shets que ves en todas las paginas de copyright y eso...</a>
+		<br>
+		<a>Unete a la causa! Crea <strong>sonrisas</strong>, cumple <strong>sueños</strong>, comparte <strong>sonrisas</strong>.</a>
+		<br>
+		<!--Espacio para poner los botones-->
+		<br>
+		<a href="#logo"><strong>Volver arriba</strong></a>
+	</footer>
+
+</html>
+<!--
+	-Imagenes claras en menú principal
+	-Mensaje de confirmación en Donación y Contacto
+	-Contraseña(?) para login
+	-BD noticias=1 vista usuarios/vista admin(iniciando secion)
+	-Footer
+-->

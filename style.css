@@ -1,0 +1,413 @@
+:root {
+	--maincolor: #f9f9f9;
+	--backgroundcolor: linear-gradient(to bottom, #4C1091 , turquoise);
+	--displayfont: 'clashdisplay', sans-serif;
+	--regularfont: 'archivo', sans-serif;
+	--fontsize: 16px;
+	--smallfontsize: .9rem;
+	--radius: 8px;
+}
+
+/************************* header *************************/
+header{
+    background-color: rgb(53, 11, 100);
+}
+
+header .contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+    flex-direction: unset;
+    padding-bottom: 5px;
+    justify-content: center;/*con el justify-content: space-between se deistribuye en toda la pantalla*/
+    gap: 40px;
+}
+
+/* COLOR DE LA PARTE DE ARRIBA LETRAS */
+header a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-bottom: 16px;
+}
+
+/************************* FONTS *************************/
+@font-face {
+	font-family: 'clashdisplay';
+	src: url("fonts/clashdisplay.woff2");
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'clashdisplay';
+	src: url("fonts/clashdisplay_bold.woff2");
+	font-weight: bold;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'archivo';
+	src: url("fonts/archivo.woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'archivo';
+	src: url("fonts/archivo_bold.woff2");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1000; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+	background-color: #8732a8;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+	color: #d40505;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/************************* BODY *************************/
+html {background: rgb(255, 254, 254); position: relative;}
+html {scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--maincolor) transparent;}
+html {font-family: var(--regularfont); font-size: var(--fontsize); letter-spacing: .02em; line-height: 1.6; color: var(--maincolor);}
+html::-webkit-scrollbar {width: 8px; background: var(--backgroundcolor);}
+html::-webkit-scrollbar-thumb {background: var(--maincolor); border-radius: 0; border: 0;}
+body {padding: 1px; margin: 1px 1px 1px; background: var(--backgroundcolor);}
+body.scroll_locked {overflow-y: hidden;}
+
+
+/************************* HEADER *************************/
+header {text-align: center; margin-bottom: 20px; position: relative; z-index: 10; padding-top: 10px;}
+
+header a svg {display: block; width: 64px;; margin: auto; transition: .4s ease-out; fill: white;}
+header a:hover svg {transform: rotateY(-180deg);}
+
+
+
+
+
+
+/************************* ARTICLE *************************/
+main, aside {max-width: 750px; margin: 0 auto;}
+main.home {max-width: 700px;}
+aside.centered {padding-top: 25px; margin-top: 100px; border-top: 2px solid;}
+
+main a {color: var(--linkcolor); cursor: pointer;}
+main a:hover {color: var(--linkhovercolor); cursor: pointer;}
+
+h1 {font-family: var(--displayfont); font-size: 4rem; margin: 0 auto 10px; line-height: 1; text-align: center;}
+hgroup p {font-family: var(--displayfont); font-size: 1.1rem; font-weight: normal; margin: 0; border-top: 2px solid; padding: 20px 0; text-align: center; line-height: 1.1; letter-spacing: .05em;}
+h2 {font-family: var(--displayfont); font-size: 2.5rem; margin: 0 0 25px 0; line-height: 1.2;}
+h3 {font-family: var(--displayfont); font-size: 1.5rem; margin: 0 0 25px 0; line-height: 1.2;}
+h4  {font-family: var(--displayfont); font-size: 3rem; margin: 0 auto 10px; line-height: 1; text-align: center;}
+h5 {font-family: var(--displayfont); font-size: 2rem; font-weight: normal; margin: 0; border-top: 2px solid; padding: 20px 0; text-align: center; line-height: 1.1; letter-spacing: .05em;}
+hr {border-top: 2px solid var(--maincolor); margin: 75px 0 25px;}
+
+article ul:not(:last-child) {margin-bottom: 2em; padding: 0; list-style: none;}
+article li {margin: 0 0 0 1.2em;}
+article p:not(:last-child) {margin-bottom: 2em;}
+article small {font-size: 10px;}
+article img {display: block; max-width: 100%;}
+
+del {text-decoration: line-through;}
+
+video {width: 100%; height: auto; background: black; border-radius: var(--radius);}
+video[poster] {width: 100%; height: 100%; object-fit: cover; background: rgb(255, 255, 255);}
+
+.footnote {text-align: center;}
+
+.centered {padding: 50px 0 60px;}
+.centered + .centered:not(.box) {padding-top: 0;}
+.centered ul li {list-style: "â€”  "; margin: 0 0 0 24px;}
+.centered a {text-decoration: underline;}
+
+.fit {display: block; width: 100%; height: auto; border-radius: var(--radius); text-align: center; font-style: italic; color: rgba(255,255,255,.4);}
+
+
+
+
+/************************* Estructura de las imagenes *************************/
+.noticias {display: grid; grid-template-columns: repeat(1, 1fr); grid-gap: 30px; text-align: center; padding-bottom: 20px;}
+.noticias article {font-size: .9rem;}
+.noticias article img {width: 90%; height: auto; display: flex; border-radius: var(--radius); color: var(--maincolor); background: var(--maincolor); transition: .1s ease-out;  margin-left: 5%;}
+.noticias article img:hover {transform: scale(1.05);}
+.noticias article div {display: block; margin-top: 10px; line-height: 1.3em;}
+.noticias article h2 {font-size: 3rem; margin: 20; padding: 0; letter-spacing: .05em;}
+
+
+/************* diseño del boton**************/
+
+/*.boton {
+            color: black;
+            background-color: white;
+            padding: 50px, 50px;
+            font-size: 13px;
+            font-family: Courier, sans-serif;
+            
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 10px;
+            font-weight: bold;
+           align-items: left;
+        }*/
+.boton2 {
+    color: black;
+    background-color: white;
+    padding: 0px 20px;
+    font-size: 15px;
+    font-family: Courier, sans-serif;
+    border-radius: 50px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    line-height: 10px;
+    font-weight: bold;
+    justify-content: left;
+    float: right;
+}
+
+.boton3	{
+			
+    color: white;
+    background-color: #8c5bc4;
+    padding: 0px 20px;
+    font-size: 8px;
+    font-family: Courier, sans-serif;
+    border: 4px solid #4C1091;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*************** Seccion de noticia imagenes **************/
+#seccion1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    color: rgb(225, 220, 220);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("media/noticia1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#seccion2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    color: rgb(225, 220, 220);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("media/noticia1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#seccion3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    color: rgb(225, 220, 220);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("media/noticia1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#seccion4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    color: rgb(225, 220, 220);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("media/noticia1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#article1 {
+    float: right;
+    padding: 1rem;
+    background-color:rgb(253, 248, 248);
+    margin: 1rem;
+}
+/**********************articulos*********************/
+
+h6{
+    font-family: var(--displayfont);
+     font-size: 4rem;
+      margin: 0 auto 10px; 
+      line-height: 1; 
+      text-align: left;
+      color: black;
+}
+h7{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 1rem;
+      margin: 0 auto 10px; 
+      line-height: 1; 
+      text-align: left;
+      color: black;
+}
+
+
+article1 {
+ 
+   
+    
+    float: right;
+    padding: 1rem;
+    background-color:rgb(172, 114, 186);
+    margin: 1rem;
+    
+    
+    
+}
+
+#img2{
+    border-radius: 25%;
+    width:250px;
+     height:300px
+}
+#img2{
+    float: right;
+}
+
+article2 {
+    float: right;
+    padding: 1rem;
+    background-color:rgb(253, 248, 248);
+    margin: 1rem;
+    
+}
+#img3{
+    border-radius: 25%;
+    width:250px;
+     height:300px
+}
+#img3{
+    float: right;
+}
+
+
+
+article3 {
+    float: right;
+    padding: 1rem;
+    background-color:rgb(253, 248, 248);
+    margin: 1rem;
+    
+}
+#img4{
+    border-radius: 25%;
+    width:250px;
+     height:300px
+}
+#img4{
+    float: left;
+}
+
+
+article4 {
+    
+    float:right;
+    padding: 2rem;
+    background-color:rgb(253, 248, 248);
+    margin: 1rem;
+    
+}
+
+
+#img5{
+    border-radius: 25%;
+    width:200px;
+     height:200px
+}
+#img5{
+    float: right;
+}
+/************************* FOOTER *************************/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(53, 11, 100);
+    padding: 16px;
+    text-align: center;
+    color: white;
+}
+
+footer a{
+	padding: 1px 52px 1px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
